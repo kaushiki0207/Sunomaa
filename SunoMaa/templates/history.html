@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>History</title>
+</head>
+<body>
+<h1>Symptom History</h1>
+
+{% for r in records %}
+<hr>
+<p><strong>Age:</strong> {{ r.age }}</p>
+<p><strong>Hot Flashes:</strong> {{ r.hot_flashes }}</p>
+<p><strong>Mood Swings:</strong> {{ r.mood_swings }}</p>
+<p><strong>AI Advice:</strong> {{ r.ai_advice }}</p>
+{% endfor %}
+
+<br>
+<a href="/">Back</a>
+
+</body>
+</html>

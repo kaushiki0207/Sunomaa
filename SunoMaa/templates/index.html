@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Suno Maa 🌸</title>
+    <style>
+        body { font-family: Arial; padding: 40px; background: #e91e63; }
+        .card { background: white; padding: 20px; border-radius: 10px; width: 400px; }
+        button { padding: 10px; background: #e91e63; color: white; border: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+<h1>Suno Maa – Silent Health Companion 🌸</h1>
+
+<div class="card">
+<form method="post" action="/submit-symptoms">
+    Age: <input type="number" name="age" required><br><br>
+
+    Hot Flashes:
+    <select name="hot_flashes">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+    </select><br><br>
+
+    Mood Swings:
+    <select name="mood_swings">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+    </select><br><br>
+
+    Chest Pain:
+    <select name="chest_pain">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+    </select><br><br>
+
+    Sleep Issues:
+    <select name="sleep_issue">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+    </select><br><br>
+
+    Irregular Period:
+    <select name="irregular_period">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+    </select><br><br>
+
+    <button type="submit">Analyze</button>
+</form>
+</div>
+
+{% if result %}
+<hr>
+<h2>Analysis Result</h2>
+<p><strong>Risk Level:</strong> {{ result.risk_level }}</p>
+<p><strong>Possible Cause:</strong> {{ result.possible_cause }}</p>
+<p><strong>Lifestyle Advice:</strong> {{ result.lifestyle_advice }}</p>
+<p><strong>Doctor Consult:</strong> {{ result.doctor_consult }}</p>
+<p><strong>Reassurance:</strong> {{ result.reassurance }}</p>
+{% endif %}
+
+<br><br>
+<a href="/history">View History</a>
+
+</body>
+</html>

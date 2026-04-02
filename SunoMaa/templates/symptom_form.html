@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submit Symptoms - Suno Maa</title>
+</head>
+<body>
+    <h2>Submit Your Symptoms 🌸</h2>
+
+    <form method="post" action="/submit-symptoms">
+        <input type="hidden" name="user_id" value="{{ user_id }}">
+
+        Age: <input type="number" name="age" required><br><br>
+
+        Hot Flashes:
+        <select name="hot_flashes">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select><br><br>
+
+        Mood Swings:
+        <select name="mood_swings">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select><br><br>
+
+        Chest Pain:
+        <select name="chest_pain">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select><br><br>
+
+        Sleep Issues:
+        <select name="sleep_issue">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select><br><br>
+
+        Irregular Period:
+        <select name="irregular_period">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

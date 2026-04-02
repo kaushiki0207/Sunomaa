@@ -1,0 +1,12 @@
+.env
+
+# Python cache / venv
+__pycache__/
+*.pyc
+venv/
+**/venv/
+
+# Local database (do not commit secrets/data)
+suno_maa.db
+**/suno_maa.db
+

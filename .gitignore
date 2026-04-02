@@ -10,3 +10,6 @@ venv/
 suno_maa.db
 **/suno_maa.db
 
+# Allow committing the local demo DB (optional)
+!SunoMaa/suno_maa.db
+
